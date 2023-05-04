@@ -39,7 +39,8 @@ extends VoidVisitorAdapter<String>
 	}
 
 	@Override
-	public void visit(VariableDeclarator n, String arg) {
+	public void visit(VariableDeclarator n, String arg) 
+	{
 		int declareLine = n.getRange().get().begin.line;
 		Node parent = n.getParentNode().get();
 		int kind = ( parent instanceof FieldDeclaration ) ? Variable.FIELD : Variable.LOCAL_VAR;
@@ -55,7 +56,7 @@ extends VoidVisitorAdapter<String>
 		}
 		int end = parent.getRange().get().end.line;
 
-		Variable v = new Variable(n.getName().toString(), n.getType().toString(), kind, declareLine, begin, end);
+		Variable v = new Variable(n.getName().getIdentifier(), n.getType().asString(), kind, declareLine, begin, end);
 		varList.add(v);
 		super.visit(n, arg);
 	}

@@ -14,8 +14,8 @@ import com.github.javaparser.StaticJavaParser;
 
 public class Main {
 
-	public static final String VERSION = "4.0.0";
-	public static final String COPYRIGHT = "(C) 2015-2022 Hirohisa AMAN <aman@computer.org>";
+	public static final String VERSION = "4.0.1";
+	public static final String COPYRIGHT = "(C) 2015-2023 Hirohisa AMAN <aman@computer.org>";
 	public static final String HEADER = "path\tline\tkind\tname\ttype\tbegin\tend";
 
 	public static void main(String[] args) 

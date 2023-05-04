@@ -1,4 +1,4 @@
-# JavaVariableExtractor 4.0.0
+# JavaVariableExtractor 4.0.1
 
 JavaVariableExtractor checks variables in a Java source file, and print their names, types and scope information in tab-separated format.
 
