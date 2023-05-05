@@ -33,7 +33,7 @@ extends VoidVisitorAdapter<String>
 		int begin = parent.getRange().get().begin.line;
 		int end = parent.getRange().get().end.line;
 		int kind = ( parent instanceof NodeWithBlockStmt ) ? Variable.LOCAL_VAR : Variable.METHOD_PARAM;
-		Variable v = new Variable(n.getName().toString(), n.getType().toString(), kind, declareLine, begin, end);
+		Variable v = new Variable(n.getName().getIdentifier(), n.getType().asString(), kind, declareLine, begin, end);
 		varList.add(v);
 		super.visit(n, arg);
 	}
